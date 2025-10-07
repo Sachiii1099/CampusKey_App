@@ -1,4 +1,4 @@
-CampusKey: Decentralized QR Verification
+#CampusKey: Decentralized QR Verification
 Welcome to the CampusKey project! This is a Decentralized Application (DApp) designed to provide secure, verifiable, and trustless access control using Smart Contracts and QR codes. The system leverages the Polygon Amoy Testnet for low-cost, fast transactions.
 
 🚀 Key Features
