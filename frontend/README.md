@@ -1,7 +1,7 @@
-#CampusKey: Decentralized QR Verification
+# CampusKey: Decentralized QR Verification
 Welcome to the CampusKey project! This is a Decentralized Application (DApp) designed to provide secure, verifiable, and trustless access control using Smart Contracts and QR codes. The system leverages the Polygon Amoy Testnet for low-cost, fast transactions.
 
-🚀 Key Features
+# 🚀 Key Features
 Decentralized Access Control: Pass validity is stored immutably on the Polygon blockchain.
 
 Secure Issuance: Only the contract owner (administrator) can issue or revoke passes via an authenticated web interface.
@@ -10,47 +10,35 @@ QR Code Verification: A dedicated Guard Scanner view uses the device camera to i
 
 Owner Mismatch Guard: The system is protected by the onlyOwner modifier in Solidity, preventing unauthorized pass administration.
 
-💻 Tech Stack
+# 💻 Tech Stack
 Component
-
 Technology
-
 Role
 
 Blockchain
-
 Solidity (v0.8.28)
-
 Smart Contract logic and state management.
 
 Network
-
 Polygon Amoy Testnet
 
 EVM-compatible chain for testing.
 
 Backend/DevOps
-
 Hardhat (v2.17.0), Ethers.js
-
 Contract deployment, testing, and administration via scripts.
 
 Frontend
 
 React (Vite)
-
 Single-Page Application (SPA) user interface.
-
 Web3 Interface
-
 Ethers.js (v6)
 
 Connecting the frontend to MetaMask and the blockchain.
 
 QR Code
-
 qrcode.react, html5-qrcode
-
 Generation and camera-based scanning.
 
 ⚙️ Setup and Installation
@@ -123,4 +111,4 @@ Display the QR code of a validly issued Pass ID (e.g., ID 3) to your webcam.
 The application will display ✅ ACCESS GRANTED.
 
 CampusKey: Decentralized QR Verification
-A project developed by Sachiii1099.
+A project developed by Sachidaanand_Mondal.
