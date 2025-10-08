@@ -25,7 +25,7 @@ async function main() {
   const QRCodePass = await hre.ethers.getContractFactory("QRCodePass");
   const qrCodePass = await QRCodePass.attach(CONTRACT_ADDRESS);
 
-  console.log("✅ Connected to QRCodePass contract at:", CONTRACT_ADDRESS);
+  console.log("Connected to QRCodePass contract at:", CONTRACT_ADDRESS);
 
   // Fetch available Hardhat accounts
   const accounts = await hre.ethers.getSigners();
@@ -53,13 +53,13 @@ async function main() {
       } else if (isValidAddress(idx)) {
         studentAddress = idx;
       } else {
-        console.log("❌ Invalid input! Enter a valid index or Ethereum address.");
+        console.log("Invalid input! Enter a valid index or Ethereum address.");
         continue;
       }
 
       const tx = await qrCodePass.issuePass(studentAddress);
       await tx.wait();
-      console.log(`✅ Pass issued to: ${studentAddress}`);
+      console.log(`Pass issued to: ${studentAddress}`);
     }
     else if (choice === "2") {
       const id = await ask("Enter pass ID to verify: ");
@@ -70,14 +70,14 @@ async function main() {
       const id = await ask("Enter pass ID to revoke: ");
       const tx = await qrCodePass.revokePass(id);
       await tx.wait();
-      console.log(`❌ Pass ID ${id} revoked`);
+      console.log(`Pass ID ${id} revoked`);
     }
     else if (choice === "4") {
-      console.log("👋 Exiting...");
+      console.log("Exiting...");
       break;
     }
     else {
-      console.log("❌ Invalid choice, try again!");
+      console.log(" Invalid choice, try again!");
     }
   }
 }
