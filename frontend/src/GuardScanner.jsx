@@ -117,13 +117,13 @@ function GuardScanner() {
                     // --- ACCESS GRANTED ---
                     setVerificationStatus({ 
                         result: true, 
-                        message: `✅ ACCESS GRANTED (Pass ID ${passId}) for: ${studentOwner}` 
+                        message: ` ACCESS GRANTED (Pass ID ${passId}) for: ${studentOwner}` 
                     });
                 } else {
                     // --- ACCESS DENIED ---
                     setVerificationStatus({ 
                         result: false, 
-                        message: `❌ ACCESS DENIED. Pass ID ${passId} is REVOKED or NON-EXISTENT.` 
+                        message: ` ACCESS DENIED. Pass ID ${passId} is REVOKED or NON-EXISTENT.` 
                     });
                 }
             } catch (error) {
