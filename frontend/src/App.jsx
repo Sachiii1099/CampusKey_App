@@ -87,7 +87,7 @@ function App() {
     const connectWallet = async () => {
       try {
         if (!window.ethereum) {
-          setStatus('❌ MetaMask not detected. Please install it!');
+          setStatus('MetaMask not detected. Please install it!');
           return;
         }
 
@@ -113,9 +113,9 @@ function App() {
         console.log("Currently Connected Wallet:", address);
 
         if (contractOwner.toLowerCase() !== address.toLowerCase()) {
-            setStatus(`⚠️ WARNING: Connected wallet is not the Contract Owner (${contractOwner}). Issue/Revoke will fail.`);
+            setStatus(`WARNING: Connected wallet is not the Contract Owner (${contractOwner}). Issue/Revoke will fail.`);
         } else {
-            setStatus('✅ Wallet connected. You are the Contract Owner.');
+            setStatus('Wallet connected. You are the Contract Owner.');
         }
 
         // Final setup
@@ -129,9 +129,9 @@ function App() {
       } catch (error) {
         console.error("Connection Error:", error);
         if (error.code === 4001) {
-            setStatus('❌ Connection rejected. Approve the network switch in MetaMask.');
+            setStatus('Connection rejected. Approve the network switch in MetaMask.');
         } else {
-            setStatus('❌ Error connecting wallet. Check console.');
+            setStatus('Error connecting wallet. Check console.');
         }
       }
     };
@@ -166,11 +166,11 @@ function App() {
           
           setQrData(qrPassData);
           setNextPassId(issuedPassId + 1);
-          setStatus(`🎉 Pass ID ${issuedPassId} issued successfully!`);
+          setStatus(`Pass ID ${issuedPassId} issued successfully!`);
           
       } catch (error) {
         console.error("Transaction Error:", error);
-        setStatus(`❌ Transaction failed. Ensure you are the contract owner and have enough MATIC.`);
+        setStatus(`Transaction failed. Ensure you are the contract owner and have enough MATIC.`);
       }
     };
     
